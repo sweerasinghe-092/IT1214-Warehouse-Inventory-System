@@ -7,13 +7,13 @@ public class Inventory{
         items = new ArrayList<>();
     }
 
-    //add item
+    //add item to the inventory
     public void addItem(Item item){
         items.add(item);
         System.out.println("Item added successfully!");
     }
 
-    //remove item
+    //remove item from inventory
     public void removeItem(String id){
         for (Item item : items) {
             if (item.getitemId().equals(id)) {
@@ -25,7 +25,7 @@ public class Inventory{
         System.out.println("Item not found!");
     }
 
-    // Update quantity
+    //update quantity
     public void updateQuantity(String id, int newQty){
         for (Item item : items){
             if (item.getitemId().equals(id)){
@@ -37,7 +37,7 @@ public class Inventory{
         System.out.println("Item not found!");
     }
 
-    //search item
+    //search item using ID or name
     public void searchItem(String key){
         for (Item item : items) {
             if (item.getitemId().equals(key) || 
@@ -49,7 +49,7 @@ public class Inventory{
         System.out.println("Item not found!");
     }
 
-    //display all items
+    //display all items in inventory
     public void displayItems(){
         if (items.isEmpty()) {
             System.out.println("Inventory is empty!");
