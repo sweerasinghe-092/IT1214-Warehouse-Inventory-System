@@ -15,7 +15,7 @@ public class Warehouse{
             System.out.println("4.Search Item");
             System.out.println("5.Display All Items");
             System.out.println("6.Exit");
-            System.out.print("Enter choice: ");
+            System.out.print("Enter the choice: ");
             System.out.print("");
 
             choice = sc.nextInt();
@@ -37,6 +37,7 @@ public class Warehouse{
 
                     inventory.addItem(new Item(id,name,quality,price));
                     break;
+                    
                 case 2:
                     System.out.print("Enter ID to remove: ");
                     inventory.removeItem(sc.nextLine());
@@ -50,10 +51,12 @@ public class Warehouse{
 
                     inventory.updateQuantity(uid, newQty);
                     break;
+                    
                 case 4:
                     System.out.print("Enter ID or Name: ");
                     inventory.searchItem(sc.nextLine());
                     break;
+                    
                 case 5:
                     inventory.displayItems();
                     break;
@@ -61,6 +64,7 @@ public class Warehouse{
                 case 6:
                     System.out.println("Exiting...");
                     break;
+                    
                 default:
                     System.out.println("Invalid choice!");
             }
